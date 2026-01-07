@@ -6,9 +6,9 @@
 class Human_A
 {
     public:
-    Weapon a_weapon;
+    Weapon& a_weapon;
     std::string name;
-    Human_A(std::string name, Weapon weapon);
+    Human_A(std::string name, Weapon &weapon);
     ~Human_A();
     void attack();
 };
