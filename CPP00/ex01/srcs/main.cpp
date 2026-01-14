@@ -10,12 +10,12 @@ int main()
     {
         std::cout << "Enter a command (ADD, SEARCH, EXIT): ";
         std::getline(std::cin, command);
-        if (command == "ADD") //accepter aussi add en minuscule
+        if (command == "ADD" || command == "add")
             phonebook.add();
-        else if (command == "SEARCH") //accepter aussi search en minuscule
+        else if (command == "SEARCH" || command == "search")
             phonebook.search();
-        else if (command == "EXIT") //accepter aussi exit en minuscule
-            sig = phonebook.exit(sig);
+        else if (command == "EXIT" || command == "exit")
+            sig = 0;
         else
             std::cout << "Invalid command. Please try again." << std::endl;
     }

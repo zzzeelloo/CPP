@@ -16,9 +16,13 @@ void Contact::set(std::string f_name, std::string l_name, std::string n_name, st
 
 //getter
 const std::string &Contact::get_first_name() const { return first_name; }
+
 const std::string &Contact::get_last_name() const { return last_name; }
+
 const std::string &Contact::get_nick_name() const { return nick_name; }
+
 const std::string &Contact::get_phone_number() const { return phone_num; }
+
 const std::string &Contact::get_secret() const { return secret; }
 
 
