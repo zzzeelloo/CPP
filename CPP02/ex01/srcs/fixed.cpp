@@ -1,5 +1,4 @@
 #include "../includes/fixed.hpp"
-#include <cmath>
 
 Fixed::Fixed() : _raw(0)
 {
@@ -15,7 +14,17 @@ Fixed::Fixed(const int intValue)
 Fixed::Fixed(const float floatValue)
 {
     std::cout << "Float constructor called" << std::endl;
-    this->_raw = std::roundf(floatValue * (1 << _fractionalBits));
+    this->_raw = roundf(floatValue * (1 << _fractionalBits));
+}
+
+Fixed & Fixed::operator=(const Fixed &other)
+{
+    std::cout << "Copy assignment operator called" << std::endl;
+    if (this != &other)
+    {
+        this->_raw = other._raw;
+    }
+    return *this;
 }
 
 Fixed::Fixed(const Fixed &other)
