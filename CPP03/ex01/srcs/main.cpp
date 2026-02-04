@@ -1,4 +1,3 @@
-#include <iostream>
 #include "../includes/ScavTrap.hpp"
 
 int	main()

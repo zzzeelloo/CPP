@@ -1,0 +1,3 @@
+- check re-link des header 
+- organise mieux le code 
+- git

@@ -48,7 +48,7 @@ int Fixed::toInt( void ) const
     return this->_raw >> _fractionalBits;
 }
 
-std::ostream& operator<<(std::ostream& out, Fixed const& value)
+std::ostream& operator<<(std::ostream& out, Fixed const& value)//a revoir
 {
     out << value.toFloat();
     return out;

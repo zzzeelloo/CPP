@@ -15,5 +15,4 @@ int main()
     std::cout << "value pointed by stringREF = " << stringREF << std::endl;
 
     return(0);
-
 }
