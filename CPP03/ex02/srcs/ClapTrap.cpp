@@ -1,4 +1,4 @@
-#include "../includes/Claptrap.hpp"
+#include "../includes/ClapTrap.hpp"
 
 Claptrap::Claptrap() : name("Default name"), hitPoints(10), energyPoints(10), attackDamage(0)
 {

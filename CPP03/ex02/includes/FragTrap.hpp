@@ -1,4 +1,4 @@
-#include "Claptrap.hpp"
+#include "ClapTrap.hpp"
 
 #ifndef FRAGTRAP_HPP
 #define FRAGTRAP_HPP
