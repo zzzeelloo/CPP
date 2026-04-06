@@ -1,11 +1,11 @@
-#include "Bureaucrat.hpp"
+#include "../includes/Bureaucrat.hpp"
 
 Bureaucrat::Bureaucrat() : name("Default"), grade(150)
 {
     std::cout << "Bureaucrat default constructor called" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(std::string name, unsigned int grade) : name(name), grade(grade)
+Bureaucrat::Bureaucrat(std::string name, int grade) : name(name), grade(grade)
 {
     std::cout << "Bureaucrat parameterized constructor called" << std::endl;
     if (grade < 1)
@@ -39,7 +39,7 @@ std::string Bureaucrat::getName() const
     return name;
 }
 
-unsigned int Bureaucrat::getGrade() const
+int Bureaucrat::getGrade() const
 {
     return grade;
 }
@@ -68,12 +68,18 @@ const char* Bureaucrat::GradeTooLowException::what() const throw()
     return "Grade is too low!";
 }
 
-void Bureaucrat::signForm(const std::string& formName, bool isSigned)
+void Bureaucrat::signForm(Form &form)
 {
-    if (isSigned)
-        std::cout << name << " signed " << formName << std::endl;
-    else
-        std::cout << name << " couldn't sign " << formName << " because their grade is too low." << std::endl;
+    try
+    {
+        form.beSigned(*this);
+        std::cout << name << " signed " << form.getName() << std::endl;
+    }
+    catch (const std::exception& e)
+    {
+        std::cout << name << " couldn't sign " << form.getName()
+                  << " because " << e.what() << std::endl;
+    }
 }
 
 std::ostream &operator<<(std::ostream &out, const Bureaucrat &bureaucrat)
