@@ -2,6 +2,8 @@
 #define AFORM_HPP
 
 #include <string>
+#include <iostream>
+#include <cstdlib>
 
 class Bureaucrat;
 

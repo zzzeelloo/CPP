@@ -68,7 +68,7 @@ void AForm::CheckEx(Bureaucrat const &executor) const
 {
     if(this->isSigned == false)
         throw FormNotSigned();
-    if(executor.getGrade() < this->getGradeToExecute())
+    if(executor.getGrade() > this->getGradeToExecute())
         throw GradeTooLowException();
 }
 
