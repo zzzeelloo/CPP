@@ -1,13 +1,15 @@
-//#include "../includes/ScalarConverter.hpp"
+#include "../includes/ScalarConverter.hpp"
 #include <iostream>
 
-int main(int ac, char **av)
+int main(int argc, char **argv)
 {
-    if (ac != 2)
-        return 1;
+    if (argc != 2)
+    {
+        std::cerr << "Usage: ./scalarConverter <value>" << std::endl;
+        return (1);
+    }
 
-    std::string arg = av[1];
-    
+    ScalarConverter::convert(argv[1]);
 
-    return 0;
+    return (0);
 }
