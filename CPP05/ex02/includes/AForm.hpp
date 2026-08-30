@@ -1,5 +1,4 @@
-#ifndef AFORM_HPP
-#define AFORM_HPP
+#pragma once
 
 #include <string>
 #include <iostream>
@@ -59,5 +58,3 @@ class AForm
 };
 
 std::ostream &operator<<(std::ostream &out, const AForm &Aform);
-
-#endif
