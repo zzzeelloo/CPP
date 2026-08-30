@@ -1,5 +1,4 @@
-# ifndef    TEMPLATE_HPP
-# define    TEMPLATE_HPP
+#pragma once
 
 #include <iostream>
 
@@ -32,5 +31,3 @@ T max(T a, T b)
     else
         return b;
 }
-
-#endif

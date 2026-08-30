@@ -5,7 +5,7 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 INCLUDES = -I includes -I .
 
 SRCS = srcs/main.cpp
-HEADERS = includes/iter.hpp
+HEADERS = includes/array.hpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)

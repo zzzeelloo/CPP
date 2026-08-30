@@ -1,5 +1,4 @@
-#ifndef ITER_HPP
-#define ITER_HPP
+#pragma once
 
 #include <iostream>
 
@@ -11,6 +10,3 @@ void iter(T *array, size_t length, F function)
         function(array[i]);
     }
 }
-
-
-#endif
