@@ -57,10 +57,12 @@ int AForm::getGradeToExecute() const
     return gradeToExecute;
 }
 
-void AForm::beSigned(Bureaucrat const &bureaucrat)
+void AForm::beSigned(const Bureaucrat& bureaucrat)
 {
     if (bureaucrat.getGrade() > gradeToSign)
         throw GradeTooLowException();
+    if(isSigned == 1)
+        throw ContractAlreadySignedException();
     isSigned = true;
 }
 
@@ -69,7 +71,7 @@ void AForm::CheckEx(Bureaucrat const &executor) const
     if(this->isSigned == false)
         throw FormNotSigned();
     if(executor.getGrade() > this->getGradeToExecute())
-        throw GradeTooLowException();
+        throw GradeTooLowToExecute();
 }
 
 const char* AForm::GradeTooLowException::what() const throw()
@@ -82,6 +84,11 @@ const char* AForm::GradeTooHighException::what() const throw()
     return "Grade is too high!";
 }
 
+const char* AForm::ContractAlreadySignedException::what() const throw()
+{
+    return "Contract already signed!";
+}
+
 const char *AForm::FormNotSigned::what() const throw()
 {
     return "Can't execute form who isn't signed !";
@@ -90,6 +97,11 @@ const char *AForm::FormNotSigned::what() const throw()
 const char* AForm::FileNotOpen::what() const throw()
 {
     return "Error with the creation of outfile";
+}
+
+const char* AForm::GradeTooLowToExecute::what() const throw()
+{
+    return "Grade is too low to execute the form!";
 }
 
 std::ostream& operator<<(std::ostream& os, const AForm& Aform)

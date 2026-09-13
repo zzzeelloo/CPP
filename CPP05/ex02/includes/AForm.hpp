@@ -42,6 +42,12 @@ class AForm
         public:
         const char* what() const throw();
     };
+
+    class ContractAlreadySignedException : public std::exception
+    {
+        public:
+        const char* what() const throw();
+    };
     
     class FileNotOpen : public std::exception
     {
@@ -53,7 +59,13 @@ class AForm
     {
         public:
         const char * what() const throw();
-    };  
+    };
+
+    class GradeTooLowToExecute : public std::exception
+    {
+        public:
+        const char * what() const throw();
+    };
     
 };
 

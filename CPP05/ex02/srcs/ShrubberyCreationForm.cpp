@@ -39,5 +39,6 @@ void ShrubberyCreationForm::execute(Bureaucrat const &executor) const
     fileout << " │  ├─ ASCII  nano boz\n";
 
     fileout.close();
+    std::cout << this->_target + "_shrubbery" << " is executed successfully" << std::endl;
 }
 
