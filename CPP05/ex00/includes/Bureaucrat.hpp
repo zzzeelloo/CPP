@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zcherif <zcherif@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/13 12:10:47 by zcherif           #+#    #+#             */
+/*   Updated: 2026/09/13 12:10:48 by zcherif          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #pragma once
 
 #include <iostream>
@@ -21,17 +33,17 @@ class Bureaucrat
     void incrementGrade();
     void decrementGrade();
 
-    class GradeTooHighException : public std::exception
-    {
-        public:
-        const char* what() const throw();
-    };
+        class GradeTooHighException : public std::exception
+        {
+            public:
+            const char* what() const throw();
+        };
 
-    class GradeTooLowException : public std::exception
-    {
-        public:
-        const char* what() const throw();
-    };
+        class GradeTooLowException : public std::exception
+        {
+            public:
+            const char* what() const throw();
+        };
 
 };
 
