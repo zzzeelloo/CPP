@@ -16,6 +16,7 @@ int main()
 
         b2.signForm(form_nimp);
         b2.signForm(form);
+        std::cout << form_nimp << std::endl;
         b1.signForm(form_nimp);
         b1.signForm(form);
     }

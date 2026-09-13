@@ -9,8 +9,8 @@ class Form
     private:
     const std::string name;
     bool isSigned;
-    const  int gradeToSign;
-    const  int gradeToExecute;
+    const int gradeToSign;
+    const int gradeToExecute;
 
     public:
     Form();
@@ -34,6 +34,12 @@ class Form
     };
     
     class GradeTooLowException : public std::exception
+    {
+        public:
+        const char* what() const throw();
+    };
+
+    class ContractAlreadySignedException : public std::exception
     {
         public:
         const char* what() const throw();
