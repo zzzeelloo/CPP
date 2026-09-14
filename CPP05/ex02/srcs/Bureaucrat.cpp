@@ -6,7 +6,7 @@
 /*   By: zcherif <zcherif@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/14 08:10:19 by zcherif           #+#    #+#             */
-/*   Updated: 2026/09/14 08:10:20 by zcherif          ###   ########.fr       */
+/*   Updated: 2026/09/14 11:41:19 by zcherif          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,8 @@ void Bureaucrat::executeForm(AForm &form)
 {
  try
 	{
-		form.execute(*this);
+        form.execute(*this);
+        std::cout << this->getName() << " executed " << form.getName() << std::endl;
 	}
 	catch(const std::exception& e)
 	{
