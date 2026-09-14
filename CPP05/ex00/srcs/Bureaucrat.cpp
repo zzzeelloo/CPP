@@ -6,7 +6,7 @@
 /*   By: zcherif <zcherif@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/13 12:10:55 by zcherif           #+#    #+#             */
-/*   Updated: 2026/09/13 12:33:32 by zcherif          ###   ########.fr       */
+/*   Updated: 2026/09/14 11:31:36 by zcherif          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Bureaucrat::Bureaucrat() : name("Default"), grade(150)
     std::cout << "Bureaucrat default constructor called" << std::endl;
 }
 
-Bureaucrat::Bureaucrat(std::string name, unsigned int grade) : name(name), grade(grade)
+Bureaucrat::Bureaucrat(std::string name, int grade) : name(name), grade(grade)
 {
     std::cout << "Bureaucrat parameterized constructor called" << std::endl;
     if (grade < 1)
