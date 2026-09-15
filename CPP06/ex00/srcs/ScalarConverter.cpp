@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ScalarConverter.cpp                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zcherif <zcherif@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/15 19:40:05 by zcherif           #+#    #+#             */
+/*   Updated: 2026/09/15 19:40:06 by zcherif          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../includes/ScalarConverter.hpp"
 
 
@@ -19,8 +31,8 @@ void ScalarConverter::convert(std::string str)
 {
 
     size_t i = 0;
-        bool f = false; 
-        bool dot = false;
+    bool f = false; 
+    bool dot = false;
 
     if(str.size() == 1 && !std::isdigit(str[i]) && std::isprint(str[i]))
     {
@@ -31,8 +43,7 @@ void ScalarConverter::convert(std::string str)
     if (str == "-inff" || str == "+inff" || str == "inff"
 	|| str == "nanf" || str == "+nanf" || str == "-nanf")
 	{
-		std::cout << "float"
-			<< std::endl;
+		std::cout << "float" << std::endl;
 		floatConverter(str);
 		return;
 	}
@@ -40,8 +51,7 @@ void ScalarConverter::convert(std::string str)
 	if (str == "-inf" || str == "+inf" || str == "inf"
 		|| str == "nan" || str == "+nan" || str == "-nan")
 	{
-		std::cout << "double"
-			<< std::endl;
+		std::cout << "double" << std::endl;
 		doubleConverter(str);
 		return;
 	}

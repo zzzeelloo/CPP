@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ScalarConverter.hpp                                :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zcherif <zcherif@student.42.fr>            +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/15 19:40:08 by zcherif           #+#    #+#             */
+/*   Updated: 2026/09/15 19:40:09 by zcherif          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SCALARCONVERTER_HPP
 #define SCALARCONVERTER_HPP
 
@@ -5,6 +17,8 @@
 #include <string>
 #include <limits>
 #include <iomanip>
+#include <cstdlib>
+#include <cmath>
 
 class ScalarConverter
 {
