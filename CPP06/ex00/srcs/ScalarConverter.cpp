@@ -6,7 +6,7 @@
 /*   By: zcherif <zcherif@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 19:40:05 by zcherif           #+#    #+#             */
-/*   Updated: 2026/09/16 09:23:00 by zcherif          ###   ########.fr       */
+/*   Updated: 2026/09/16 10:04:56 by zcherif          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void ScalarConverter::convert(std::string str)
 
     if(str.size() == 1 && !std::isdigit(str[i]) && std::isprint(str[i]))
     {
-        charConverter(str[0]);
+        charCaster(str[0]);
         return; 
     }
 
@@ -44,7 +44,7 @@ void ScalarConverter::convert(std::string str)
 	|| str == "nanf" || str == "+nanf" || str == "-nanf")
 	{
 		std::cout << "float" << std::endl;
-		floatConverter(str);
+		floatCaster(str);
 		return;
 	}
 
@@ -52,7 +52,7 @@ void ScalarConverter::convert(std::string str)
 		|| str == "nan" || str == "+nan" || str == "-nan")
 	{
 		std::cout << "double" << std::endl;
-		doubleConverter(str);
+		doubleCaster(str);
 		return;
 	}
 
@@ -93,15 +93,15 @@ void ScalarConverter::convert(std::string str)
 
     if (dot == true && f == true)
     {
-        floatConverter(str);
+        floatCaster(str);
         return;
     }
 
     if(dot == true && f == false)
     {
-        doubleConverter(str);
+        doubleCaster(str);
         return;
     }
 
-    intConverter(str);
+    intCaster(str);
 }

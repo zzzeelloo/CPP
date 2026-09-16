@@ -6,13 +6,13 @@
 /*   By: zcherif <zcherif@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 19:39:58 by zcherif           #+#    #+#             */
-/*   Updated: 2026/09/16 09:21:50 by zcherif          ###   ########.fr       */
+/*   Updated: 2026/09/16 10:04:11 by zcherif          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ScalarConverter.hpp"
 
-void charConverter(char c)
+void charCaster(char c)
 {
     if(c < 32)
         std::cout  << "char: Non displayable" << std::endl;
@@ -23,7 +23,7 @@ void charConverter(char c)
     std::cout << "double: " << static_cast<double>(c) << std::endl;
 }
 
-void intConverter(std::string str)
+void intCaster(std::string str)
 {
     long int nb = std::strtol(str.c_str(), NULL, 10);
     if(nb > std::numeric_limits<int>::max() || nb < std::numeric_limits<int>::min())
@@ -44,7 +44,7 @@ void intConverter(std::string str)
     std::cout << "double: " << static_cast<double>(nb) << std::endl;
 }
 
-void floatConverter(std::string str)
+void floatCaster(std::string str)
 {
     float nb = std::strtof(str.c_str(), NULL);
     
@@ -75,7 +75,7 @@ void floatConverter(std::string str)
     std::cout << "double: " << static_cast<double>(nb) << std::endl;
 }
 
-void doubleConverter(std::string str)
+void doubleCaster(std::string str)
 {
     double nb = std::strtod(str.c_str(), NULL);
     

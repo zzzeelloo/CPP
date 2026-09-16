@@ -6,7 +6,7 @@
 /*   By: zcherif <zcherif@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 19:40:08 by zcherif           #+#    #+#             */
-/*   Updated: 2026/09/15 19:40:09 by zcherif          ###   ########.fr       */
+/*   Updated: 2026/09/16 10:03:47 by zcherif          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,10 @@ class ScalarConverter
 };
 
 //convert functions
-void charConverter(char c);
-void intConverter(std::string str);
-void floatConverter(std::string str);
-void doubleConverter(std::string str);
+void charCaster(char c);
+void intCaster(std::string str);
+void floatCaster(std::string str);
+void doubleCaster(std::string str);
 
 
 
