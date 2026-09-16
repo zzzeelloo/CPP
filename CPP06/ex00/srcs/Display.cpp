@@ -6,7 +6,7 @@
 /*   By: zcherif <zcherif@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 19:39:58 by zcherif           #+#    #+#             */
-/*   Updated: 2026/09/16 10:04:11 by zcherif          ###   ########.fr       */
+/*   Updated: 2026/09/16 11:15:20 by zcherif          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void charCaster(char c)
     std::cout << "double: " << static_cast<double>(c) << std::endl;
 }
 
-void intCaster(std::string str)
+void intCaster(std::string str) 
 {
     long int nb = std::strtol(str.c_str(), NULL, 10);
     if(nb > std::numeric_limits<int>::max() || nb < std::numeric_limits<int>::min())
