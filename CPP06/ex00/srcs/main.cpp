@@ -6,12 +6,11 @@
 /*   By: zcherif <zcherif@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 19:40:02 by zcherif           #+#    #+#             */
-/*   Updated: 2026/09/15 19:40:03 by zcherif          ###   ########.fr       */
+/*   Updated: 2026/09/16 09:21:52 by zcherif          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ScalarConverter.hpp"
-#include <iostream>
 
 int main(int argc, char **argv)
 {

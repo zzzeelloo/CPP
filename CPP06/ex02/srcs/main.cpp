@@ -12,7 +12,6 @@ int main()
     }
     std::cout << "identify pointer test:" << std::endl;
     identify(ptr);
-    identify(*ptr);
 
     std::cout << "identify reference test:" << std::endl;
     Base &ref = *ptr;

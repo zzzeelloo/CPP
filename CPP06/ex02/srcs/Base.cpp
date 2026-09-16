@@ -5,10 +5,7 @@ Base::~Base() {}
 
 Base *generate(void)
 {
-    
     int r = std::rand() % 3;
-
-    std::cout << "Generated random number: " << r << std::endl; // Debugging output
 
     switch (r)
     {
@@ -19,7 +16,7 @@ Base *generate(void)
         case 2:
             return new C();
         default:
-            return nullptr; // This should never happen
+            return NULL;
     }
 }
 void identify(Base* p)
@@ -40,25 +37,25 @@ void identify(Base& p)
     {
         A& a = dynamic_cast<A&>(p);
         std::cout << "A" << std::endl;
-        (void)a; // To avoid unused variable warning
+        (void)a;
     }
-    catch (std::bad_cast&)
+    catch (std::exception &e)
     {
         try
         {
             B& b = dynamic_cast<B&>(p);
             std::cout << "B" << std::endl;
-            (void)b; // To avoid unused variable warning
+            (void)b;
         }
-        catch (std::bad_cast&)
+        catch (std::exception &e)
         {
             try
             {
                 C& c = dynamic_cast<C&>(p);
                 std::cout << "C" << std::endl;
-                (void)c; // To avoid unused variable warning
+                (void)c;
             }
-            catch (std::bad_cast&)
+            catch (std::exception &e)
             {
                 std::cout << "Unknown type" << std::endl;
             }

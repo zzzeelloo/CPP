@@ -1,10 +1,9 @@
 # ifndef SERIALIZE_HPP
 # define SERIALIZE_HPP
 
-#include <cstdint>
+#include <stdint.h>
 #include <string>
 #include <iostream>
-#include <iomanip>
 
 typedef struct {
     int number;

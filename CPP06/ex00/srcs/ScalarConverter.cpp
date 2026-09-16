@@ -6,7 +6,7 @@
 /*   By: zcherif <zcherif@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 19:40:05 by zcherif           #+#    #+#             */
-/*   Updated: 2026/09/15 19:40:06 by zcherif          ###   ########.fr       */
+/*   Updated: 2026/09/16 09:23:00 by zcherif          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,8 +62,7 @@ void ScalarConverter::convert(std::string str)
     while(str[i] && isdigit(str[i]))
         i++;
 
-        
-    if(str[i] != '.' && str[i] != '\0')
+    if(str[i] == '.' && str[i] != '\0')
     {
         std::cout << "invalid input" << std::endl;
         return;
@@ -76,7 +75,6 @@ void ScalarConverter::convert(std::string str)
         dot = true;
         i++;
     }
-
 
     while (str[i])
     {

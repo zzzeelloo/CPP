@@ -6,12 +6,11 @@
 /*   By: zcherif <zcherif@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/15 19:39:58 by zcherif           #+#    #+#             */
-/*   Updated: 2026/09/15 19:39:59 by zcherif          ###   ########.fr       */
+/*   Updated: 2026/09/16 09:21:50 by zcherif          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/ScalarConverter.hpp"
-#include <cmath>
 
 void charConverter(char c)
 {
